@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+	<button>你好1</button>
+	<button>你好2</button>
+	<button>你好3</button>
+	<button>你好4</button>
+	<button>你好5</button>
+</head>
+<body>
+<script>
+window.onload = function() {
+//	var btn = document.getElementsByTagName('button');
+//	for(var i=0; i<btn.length; i++){
+//		(function(i){
+//			btn[i].onclick = function() {
+//				console.log("我点击了第"+ i+ "个按钮")
+//			}
+//		})(i)
+//	}
+
+	let btn = document.getElementsByTagName('button');
+	for(let i=0; i<btn.length; i++){
+		btn[i].onclick = function () {
+			console.log("我点击了第"+ i+ "个按钮")
+		}
+	}
+}
+
+</script>
+</body>
+</html>
