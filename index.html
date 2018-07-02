@@ -11,6 +11,11 @@
 </head>
 <body>
 <script>
+//let和var的区别
+	//1、作用域不同
+	//2、let变量不会被提升
+	//3、在相同的作用域下，let不能声明相同的变量
+	//4、for循环体现let的父子作用域
 window.onload = function() {
 //	var btn = document.getElementsByTagName('button');
 //	for(var i=0; i<btn.length; i++){
@@ -28,6 +33,38 @@ window.onload = function() {
 		}
 	}
 }
+
+//const的使用和注意
+	//1、声明常量必须赋值
+	//2、常量不能被提升
+	//3、相同作用域下不能声明相同的常量
+	//4、只有在当前的代码块中有效
+
+//数据集合set  （es6语法）
+	//特点：a、类似于数组，但没有重复的数据；b、开发中用于去除重复的数据；c、key和value都是相等的
+	//1个属性（size）
+	//4个方法（add-向数组中添加元素  delete-删除数组中的元素（返回boolear值）  has-判断数组中是否有该元素（返回boolear值）  clear-清空数组内的所有元素）
+	//let set = new Set();   我是空数组
+	let set = new Set(['张三','李四','王五']);
+	console.log(set.add('苏正堂'));
+	console.log(set.delete('张三'));
+	console.log(set.has('苏正堂'));
+	console.log(set.clear());
+	console.log(set);
+
+//通过class面向对象
+	class Person{
+		constructor(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		show(){
+			console.log('我是'+this.name+',今年'+this.age+'岁');
+		}
+	}
+	let person = new Person('苏正堂',26);
+	console.log(person);
+	person.show()
 
 </script>
 </body>
